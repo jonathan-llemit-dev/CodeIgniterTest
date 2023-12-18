@@ -1,54 +1,35 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-/*
-| -------------------------------------------------------------------------
-| URI ROUTING
-| -------------------------------------------------------------------------
-| This file lets you re-map URI requests to specific controller functions.
-|
-| Typically there is a one-to-one relationship between a URL string
-| and its corresponding controller class/method. The segments in a
-| URL normally follow this pattern:
-|
-|	example.com/class/method/id/
-|
-| In some instances, however, you may want to remap this relationship
-| so that a different class/function is called than the one
-| corresponding to the URL.
-|
-| Please see the user guide for complete details:
-|
-|	https://codeigniter.com/userguide3/general/routing.html
-|
-| -------------------------------------------------------------------------
-| RESERVED ROUTES
-| -------------------------------------------------------------------------
-|
-| There are three reserved routes:
-|
-|	$route['default_controller'] = 'welcome';
-|
-| This route indicates which controller class should be loaded if the
-| URI contains no data. In the above example, the "welcome" class
-| would be loaded.
-|
-|	$route['404_override'] = 'errors/page_missing';
-|
-| This route will tell the Router which controller/method to use if those
-| provided in the URL cannot be matched to a valid route.
-|
-|	$route['translate_uri_dashes'] = FALSE;
-|
-| This is not exactly a route, but allows you to automatically route
-| controller and method names that contain dashes. '-' isn't a valid
-| class or method name character, so it requires translation.
-| When you set this option to TRUE, it will replace ALL dashes in the
-| controller and method URI segments.
-|
-| Examples:	my-controller/index	-> my_controller/index
-|		my-controller/my-method	-> my_controller/my_method
-*/
+// default routes
 $route['default_controller'] = 'welcome';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+// route for hello function on SampleController that only echo "Hello World"
+$route['hello'] = 'SampleController/hello';
+
+// route for sample function on SampleController that displays sample_page on view
+$route['sample'] = 'SampleController/sample';
+
+// route for aboutMe function on SampleController that accepts parameter for $name
+$route['about/(:any)'] = 'SampleController/aboutMe/$1';
+
+// route for aboutMeView function on SampleController that accepts multi parameters and display it on view
+$route['aboutMeView/(:any)/(:num)/(:any)'] = 'SampleController/aboutMeView/$1/$2/$3';
+
+// route for index function on StudentsController that uses model
+$route['students'] = 'StudentsController/index';
+
+// main table
+$route['students_portal'] = 'students_portal/StudentsPortalController/index';
+// add student page
+$route['student/add'] = 'students_portal/StudentsPortalController/create';
+// add student function
+$route['student/store'] = 'students_portal/StudentsPortalController/store';
+// edit student page
+$route['student/edit/(:num)'] = 'students_portal/StudentsPortalController/edit/$1';
+// edit student function
+$route['student/update/(:num)'] = 'students_portal/StudentsPortalController/update/$1';
+// student delete function
+$route['student/delete/(:num)'] = 'students_portal/StudentsPortalController/delete/$1';
