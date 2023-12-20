@@ -8,7 +8,7 @@ class StudentsPortalController extends CI_Controller
         parent::__construct();
 
         $this->load->model('StudentModel');
-        $this->load->library('session'); 
+        $this->load->library('session','form_validation'); 
         
     }
 
@@ -31,6 +31,8 @@ class StudentsPortalController extends CI_Controller
 
     public function store()
 	{
+
+        $this->load->library('form_validation'); 
 
         $this->form_validation->set_rules('name', 'Name', 'required|alpha');
         $this->form_validation->set_rules('age', 'Age', 'required|numeric');
