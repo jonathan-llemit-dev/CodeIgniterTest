@@ -29,17 +29,17 @@
                         <form method="post" action="<?= base_url('student/store'); ?>">
                             <div class="form-group">
                                 <label for="name">Name</label>
-                                <input id="name" name="name" type="text" class="form-control">
+                                <input id="name" name="name" type="text" class="form-control" required>
                                 <?= form_error('name', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="age">Age</label>
-                                <input id="age" name="age" type="text" class="form-control">
+                                <input id="age" name="age" type="text" class="form-control" required>
                                 <?= form_error('age', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="gender">Gender</label>
-                                <select id="gender" name="gender" class="form-control">
+                                <select id="gender" name="gender" class="form-control"  required>
                                     <option value="male" <?= set_select('gender', 'male'); ?>>Male</option>
                                     <option value="female" <?= set_select('gender', 'female'); ?>>Female</option>
                                     <option value="other" <?= set_select('gender', 'other'); ?>>Other</option>

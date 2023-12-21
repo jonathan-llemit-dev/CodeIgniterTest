@@ -30,14 +30,21 @@
                             <div class="form-group">
                                 <label for="name">Name</label>
                                 <input id="name" name="name" type="text" class="form-control" value="<?= $student->student_name; ?>" required>
+                                <?= form_error('name', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="age">Age</label>
-                                <input id="age" name="age" type="number" class="form-control" value="<?= $student->age; ?>" required>
+                                <input id="age" name="age" type="text" class="form-control" value="<?= $student->age; ?>" required>
+                                <?= form_error('age', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="gender">Gender</label>
-                                <input id="gender" name="gender" type="text" class="form-control" value="<?= $student->gender; ?>" required>
+                                <select id="gender" name="gender" class="form-control" required>
+                                    <option value="male" <?= set_select('gender', 'male'); ?>>Male</option>
+                                    <option value="female" <?= set_select('gender', 'female'); ?>>Female</option>
+                                    <option value="other" <?= set_select('gender', 'other'); ?>>Other</option>
+                                </select>
+                                <?= form_error('gender', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <div class="form-group">
                                 <button type="submit" class="btn btn-primary">Save</button>
