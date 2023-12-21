@@ -40,9 +40,9 @@
                             <div class="form-group">
                                 <label for="gender">Gender</label>
                                 <select id="gender" name="gender" class="form-control" required>
-                                    <option value="male" <?= set_select('gender', 'male'); ?>>Male</option>
-                                    <option value="female" <?= set_select('gender', 'female'); ?>>Female</option>
-                                    <option value="other" <?= set_select('gender', 'other'); ?>>Other</option>
+                                    <option value="male" <?php echo ($student->gender == 'male') ? 'selected' : ''; ?>>Male</option>
+                                    <option value="female" <?php echo ($student->gender == 'female') ? 'selected' : ''; ?>>Female</option>
+                                    <option value="other" <?php echo ($student->gender == 'other') ? 'selected' : ''; ?>>Other</option>
                                 </select>
                                 <?= form_error('gender', '<p class="text-danger">', '</p>'); ?>
                             </div>
