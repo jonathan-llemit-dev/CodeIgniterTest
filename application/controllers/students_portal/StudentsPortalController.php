@@ -73,6 +73,18 @@ class StudentsPortalController extends CI_Controller
     public function update($student_id)
 	{
 
+        $this->load->library('form_validation'); 
+
+        $this->form_validation->set_rules('name', 'Name', 'required|alpha');
+        $this->form_validation->set_rules('age', 'Age', 'required|numeric');
+        $this->form_validation->set_rules('gender', 'Gender', 'required');
+
+        if ($this->form_validation->run() == false) {
+
+            return $this->edit($student_id);
+
+        }
+
         $StudentModel = new StudentModel;
 
         $data = [
