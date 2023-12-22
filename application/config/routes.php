@@ -33,3 +33,6 @@ $route['student/edit/(:num)'] = 'students_portal/StudentsPortalController/edit/$
 $route['student/update/(:num)'] = 'students_portal/StudentsPortalController/update/$1';
 // student delete function
 $route['student/delete/(:num)'] = 'students_portal/StudentsPortalController/delete/$1';
+
+// login
+$route['login'] = 'auth/AuthController/index';
