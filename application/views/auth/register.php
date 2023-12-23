@@ -60,6 +60,7 @@
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </form>
+                        <p class="text-center mt-3">Already have an account? <a href="<?= base_url('login'); ?>">Login here</a></p>
                     </div>
                 </div>
             </div>
