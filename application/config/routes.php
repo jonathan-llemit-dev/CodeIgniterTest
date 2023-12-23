@@ -36,3 +36,6 @@ $route['student/delete/(:num)'] = 'students_portal/StudentsPortalController/dele
 
 // login
 $route['login'] = 'auth/AuthController/index';
+
+// registration
+$route['register'] = 'auth/AuthController/register';
