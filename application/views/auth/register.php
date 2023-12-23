@@ -20,7 +20,7 @@
             <div class="col-md-6">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="text-center">Login</h4>
+                        <h4 class="text-center">Create Account</h4>
                     </div>
                     <div class="card-body">
                         <form>
@@ -32,7 +32,7 @@
                                 <label for="password">Password:</label>
                                 <input type="password" class="form-control" id="password" placeholder="Enter your password">
                             </div>
-                            <button type="submit" class="btn btn-primary btn-block">Login</button>
+                            <button type="submit" class="btn btn-primary btn-block">Submit</button>
                         </form>
                     </div>
                 </div>
