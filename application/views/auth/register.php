@@ -27,20 +27,20 @@
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="firstName">First Name:</label>
-                                    <input type="text" class="form-control" id="firstName" placeholder="Enter your first name">
+                                    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name">
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="lastName">Last Name:</label>
-                                    <input type="text" class="form-control" id="lastName" placeholder="Enter your last name">
+                                    <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name">
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="birthDate">Birth Date:</label>
-                                <input type="date" class="form-control" id="birthDate">
+                                <input type="date" class="form-control" id="birthDate" name="birthDate">
                             </div>
                             <div class="form-group">
                                 <label for="gender">Gender:</label>
-                                <select class="form-control" id="gender">
+                                <select class="form-control" id="gender" name="gender">
                                     <option value="male">Male</option>
                                     <option value="female">Female</option>
                                     <option value="other">Other</option>
@@ -48,15 +48,15 @@
                             </div>
                             <div class="form-group">
                                 <label for="email">Email:</label>
-                                <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                                <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
                             </div>
                             <div class="form-group">
                                 <label for="password">Password:</label>
-                                <input type="password" class="form-control" id="password" placeholder="Enter your password">
+                                <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
                             </div>
                             <div class="form-group">
                                 <label for="confirmPassword">Confirm Password:</label>
-                                <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm your password">
+                                <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </form>
