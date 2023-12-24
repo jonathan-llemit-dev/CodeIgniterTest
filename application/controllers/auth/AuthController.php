@@ -32,7 +32,7 @@ class AuthController extends CI_Controller {
 
         if ($this->form_validation->run() == false) {
 
-            return $this->create();
+            return $this->register();
 
         }
 
@@ -48,7 +48,7 @@ class AuthController extends CI_Controller {
 
         $this->session->set_flashdata('created', 'New Student Added!');
 
-		return redirect('students_portal');
+		return redirect('login');
 
 	}
 
