@@ -23,7 +23,7 @@
                         <h4 class="text-center">Create Account</h4>
                     </div>
                     <div class="card-body">
-                        <form>
+                        <form method="post" action="<?= base_url('register/store'); ?>">
                             <div class="form-row">
                                 <div class="form-group col-md-6">
                                     <label for="firstName">First Name:</label>

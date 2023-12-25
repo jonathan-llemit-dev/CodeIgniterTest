@@ -39,3 +39,6 @@ $route['login'] = 'auth/AuthController/index';
 
 // registration
 $route['register'] = 'auth/AuthController/register';
+
+// add student function
+$route['register/store'] = 'auth/AuthController/store';

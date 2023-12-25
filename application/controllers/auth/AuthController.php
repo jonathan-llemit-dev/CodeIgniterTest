@@ -36,16 +36,19 @@ class AuthController extends CI_Controller {
 
         }
 
-		$this->load->model('StudentModel');
-        $StudentModel = new StudentModel;
+		$this->load->model('UserModel');
+        // $StudentModel = new StudentModel;
 
         $data = [
-            'student_name' => $this->input->post('name'),
-            'age' => $this->input->post('age'),
+            'first_name' => $this->input->post('firstName'),
+			'last_name' => $this->input->post('lastName'),
+            'birth_date' => $this->input->post('birthDate'),
             'gender' => $this->input->post('gender'),
+			'user_email' => $this->input->post('email'),
+			'password' => $this->input->post('password'),
         ];
 
-        $StudentModel->insert_data($data);
+        $this->UserModel->insert_data($data);
 
         $this->session->set_flashdata('created', 'New Student Added!');
 
