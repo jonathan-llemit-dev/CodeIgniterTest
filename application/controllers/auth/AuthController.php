@@ -3,6 +3,13 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class AuthController extends CI_Controller {
 
+	public function __construct() {
+        parent::__construct();
+
+        $this->load->library('session','form_validation'); 
+        
+    }
+
 	public function index()
 	{
 
@@ -37,7 +44,6 @@ class AuthController extends CI_Controller {
         }
 
 		$this->load->model('UserModel');
-        // $StudentModel = new StudentModel;
 
         $data = [
             'first_name' => $this->input->post('firstName'),
