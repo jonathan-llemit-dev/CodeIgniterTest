@@ -36,6 +36,7 @@ class AuthController extends CI_Controller {
 
         }
 
+		$this->load->model('StudentModel');
         $StudentModel = new StudentModel;
 
         $data = [
