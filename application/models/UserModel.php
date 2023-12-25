@@ -8,9 +8,11 @@ class UserModel extends CI_Model {
     parent::__construct();
   }
 
-  public function index()
+  public function insert_data($data)
   {
-    // 
+
+    $this->db->insert('users', $data);
+
   }
 
 }
