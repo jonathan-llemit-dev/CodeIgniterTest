@@ -45,13 +45,17 @@ class AuthController extends CI_Controller {
 
 		$this->load->model('UserModel');
 
+		// Hash the password
+		$password = $this->input->post('password');
+		$hashed_password = password_hash($password, PASSWORD_BCRYPT);
+
         $data = [
             'first_name' => $this->input->post('firstName'),
 			'last_name' => $this->input->post('lastName'),
             'birth_date' => $this->input->post('birthDate'),
             'gender' => $this->input->post('gender'),
 			'user_email' => $this->input->post('email'),
-			'password' => $this->input->post('password'),
+			'password' => $hashed_password,
         ];
 
         $this->UserModel->insert_data($data);
