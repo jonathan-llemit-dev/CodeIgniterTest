@@ -40,8 +40,11 @@ $route['login'] = 'auth/AuthController/index';
 // registration
 $route['register'] = 'auth/AuthController/register';
 
-// add student function
+// save registration function
 $route['register/store'] = 'auth/AuthController/store';
 
 // dashboard
 $route['dashboard'] = 'DashboardController/index';
+
+// login authentication function
+$route['login/authenticate'] = 'auth/AuthController/login';
