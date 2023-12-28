@@ -93,7 +93,34 @@ class AuthController extends CI_Controller {
 
 	public function login() {
 		
-		
+		$this->load->library('form_validation');
+
+        // Set validation rules for the login form
+        $this->form_validation->set_rules('email', 'Email', 'trim|required');
+        $this->form_validation->set_rules('password', 'Password', 'trim|required');
+
+        if ($this->form_validation->run() == FALSE) {
+
+			$this->session->set_flashdata('error', 'Invalid Email or Password');
+			return redirect('login');
+
+        } else {
+            // Validation passed, attempt to authenticate the user
+            $user_email = $this->input->post('email');
+            $password = $this->input->post('password');
+
+            if ($this->auth_model->authenticate($user_email, $password)) {
+
+                $this->session->set_flashdata('success', 'Logged in Successfully');
+                redirect('dashboard');
+
+            } else {
+
+                $this->session->set_flashdata('error', 'Invalid Credentials');
+				return redirect('login');
+
+            }
+        }
 
 	}
 
