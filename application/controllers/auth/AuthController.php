@@ -93,7 +93,7 @@ class AuthController extends CI_Controller {
 
 	public function login() {
 		
-		$this->load->library('session', 'form_validation');
+		$this->load->library('form_validation');
 
         // Set validation rules for the login form
         $this->form_validation->set_rules('email', 'Email', 'trim|required');
@@ -114,7 +114,7 @@ class AuthController extends CI_Controller {
             if ($this->UserModel->authenticate($user_email, $password)) {
 
                 $this->session->set_flashdata('success', 'Logged in Successfully');
-                redirect('dashboard');
+                return redirect('dashboard');
 
             } else {
 
