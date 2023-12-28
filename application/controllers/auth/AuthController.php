@@ -91,4 +91,10 @@ class AuthController extends CI_Controller {
 		return true;
 	}
 
+	public function login() {
+		
+		
+
+	}
+
 }
