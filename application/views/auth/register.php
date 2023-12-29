@@ -28,15 +28,18 @@
                                 <div class="form-group col-md-6">
                                     <label for="firstName">First Name:</label>
                                     <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter your first name">
+                                    <?= form_error('firstName', '<p class="text-danger">', '</p>'); ?>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <label for="lastName">Last Name:</label>
                                     <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Enter your last name">
+                                    <?= form_error('lastName', '<p class="text-danger">', '</p>'); ?>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <label for="birthDate">Birth Date:</label>
                                 <input type="date" class="form-control" id="birthDate" name="birthDate">
+                                <?= form_error('birthDate', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="gender">Gender:</label>
@@ -45,18 +48,22 @@
                                     <option value="female">Female</option>
                                     <option value="other">Other</option>
                                 </select>
+                                <?= form_error('gender', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="email">Email:</label>
                                 <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email">
+                                <?= form_error('email', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="password">Password:</label>
                                 <input type="password" class="form-control" id="password" name="password" placeholder="Enter your password">
+                                <?= form_error('password', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <div class="form-group">
                                 <label for="confirmPassword">Confirm Password:</label>
                                 <input type="password" class="form-control" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password">
+                                <?= form_error('confirmPassword', '<p class="text-danger">', '</p>'); ?>
                             </div>
                             <button type="submit" class="btn btn-primary btn-block">Register</button>
                         </form>
