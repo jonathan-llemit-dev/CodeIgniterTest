@@ -99,7 +99,7 @@ class AuthController extends CI_Controller {
         $this->form_validation->set_rules('email', 'Email', 'trim|required');
         $this->form_validation->set_rules('password', 'Password', 'trim|required');
 
-        if ($this->form_validation->run() == FALSE) {
+        if ($this->form_validation->run() == false) {
 
 			$this->session->set_flashdata('error', 'Invalid Email or Password');
 			return redirect('login');
