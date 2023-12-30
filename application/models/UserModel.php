@@ -25,7 +25,7 @@ class UserModel extends CI_Model {
         // Verify the password (you should use a more secure method, like password_hash())
         if (password_verify($password, $user->password)) {
             // Password is correct, return true
-            return true;
+            return $user;
         }
     }
 
