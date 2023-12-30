@@ -111,9 +111,19 @@ class AuthController extends CI_Controller {
 
 			$this->load->model('UserModel');
 
-            if ($this->UserModel->authenticate($user_email, $password)) {
+			$user = $this->UserModel->authenticate($user_email, $password);
+
+            if ($user) {
+
+				// Set session data
+                $user_data = array(
+                    'user_id' => $user->id,
+                    'userEmail' => $user->user_email,
+                    'logged_in' => TRUE
+                );
 
                 $this->session->set_flashdata('success', 'Logged in Successfully');
+				$this->session->set_userdata($user_data);
                 return redirect('dashboard');
 
             } else {
