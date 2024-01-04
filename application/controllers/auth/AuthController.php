@@ -136,4 +136,13 @@ class AuthController extends CI_Controller {
 
 	}
 
+	public function logout() {
+
+        // Destroy the session data
+        $this->session->sess_destroy();
+
+        return redirect('login');
+		
+    }
+
 }
