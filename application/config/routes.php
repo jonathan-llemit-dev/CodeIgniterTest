@@ -48,3 +48,6 @@ $route['dashboard'] = 'DashboardController/index';
 
 // login authentication function
 $route['login/authenticate'] = 'auth/AuthController/login';
+
+// logout
+$route['logout'] = 'auth/AuthController/logout';
