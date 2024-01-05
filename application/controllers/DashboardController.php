@@ -16,7 +16,13 @@ class DashboardController extends CI_Controller
     public function index()
 	{
 
-        $this->load->view('dashboard');
+        if ($this->session->userdata('logged_in')) {
+            $data['first_name'] = $this->session->userdata('first_name');
+            $data['last_name'] = $this->session->userdata('last_name');
+            $this->load->view('dashboard', $data);
+        } else {
+            redirect('login');
+        }
 
 	}
 

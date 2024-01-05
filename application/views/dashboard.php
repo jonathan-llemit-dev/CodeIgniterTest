@@ -47,6 +47,7 @@
                                 Logout
                             </a>
                         </li>
+                        <?php echo $first_name; ?>
                     </ul>
                 </div>
             </nav>
