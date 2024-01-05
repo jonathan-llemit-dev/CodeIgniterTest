@@ -119,6 +119,8 @@ class AuthController extends CI_Controller {
                 $user_data = array(
                     'user_id' => $user->id,
                     'userEmail' => $user->user_email,
+					'first_name' => $user->first_name,
+					'last_name' => $user->last_name,
                     'logged_in' => TRUE
                 );
 
