@@ -13,7 +13,11 @@ class AuthController extends CI_Controller {
 	public function index()
 	{
 
-		$this->load->view('auth/login');
+		if ($this->session->userdata('logged_in')) {
+            return redirect('dashboard');
+        } else {
+            $this->load->view('auth/login');
+        }
 
 	}
 
