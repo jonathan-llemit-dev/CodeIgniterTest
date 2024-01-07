@@ -59,6 +59,10 @@
                 </div>
 
                 <!-- Your content goes here -->
+                <?php echo $first_name." ".$last_name; ?><br>
+                <?php echo $birthdate; ?><br>
+                <?php echo $gender; ?><br>
+                <?php echo $email; ?><br>
 
             </main>
         </div>

@@ -125,6 +125,8 @@ class AuthController extends CI_Controller {
                     'userEmail' => $user->user_email,
 					'first_name' => $user->first_name,
 					'last_name' => $user->last_name,
+					'birthdate' => $user->birth_date,
+					'gender' => $user->gender,
                     'logged_in' => TRUE
                 );
 
