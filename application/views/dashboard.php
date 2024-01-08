@@ -12,6 +12,20 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 
     <title>Dashboard</title>
+
+    <style>
+        /* Set a fixed height for the sidebar */
+        .sidebar {
+            height: 100vh; /* 100% of the viewport height */
+            overflow-y: auto; /* Enable vertical scrolling if content overflows */
+        }
+
+        /* Optional: Adjust padding or margins for a better visual appearance */
+        .sidebar-sticky {
+            padding-top: 20px;
+        }
+    </style>
+
   </head>
   <body>
 
@@ -47,7 +61,6 @@
                                 Logout
                             </a>
                         </li>
-                        <?php echo $first_name." ".$last_name; ?>
                     </ul>
                 </div>
             </nav>
