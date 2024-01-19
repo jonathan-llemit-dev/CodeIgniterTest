@@ -3,11 +3,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 
 class StudentModel extends CI_Model {
 
-  public function student_name()
-  {
-    return $name = "Jonathan";
-  }
-
   public function student_gender($id)
   {
 
