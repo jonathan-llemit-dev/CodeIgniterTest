@@ -77,7 +77,16 @@
                 </div>
 
                 <!-- Your content goes here -->
-                <?php echo $first_name." ".$last_name; ?><br>
+
+                <div class="card">
+                    <div class="card-body">
+                        <h5 class="card-title">User Info</h5>
+                        <p class="card-text">
+                            <?php echo $first_name." ".$last_name; ?><br>
+                        </p>
+                    </div>
+                </div>
+
                 <?php echo $birthdate; ?><br>
                 <?php echo $gender; ?><br>
                 <?php echo $email; ?><br>
