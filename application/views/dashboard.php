@@ -82,16 +82,16 @@
                     <div class="card-body">
                         <h5 class="card-title">User Info</h5>
                         <p class="card-text">
-                            <?php echo $first_name." ".$last_name; ?>
+                            Name: <?php echo $first_name." ".$last_name; ?>
                         </p>
                         <p class="card-text">
-                            <?php echo $birthdate; ?>
+                            Birthdate: <?php echo $birthdate; ?>
                         </p>
                         <p class="card-text">
-                            <?php echo $gender; ?>
+                            Gender: <?php echo $gender; ?>
                         </p>
                         <p class="card-text">
-                            <?php echo $email; ?>
+                            Email: <?php echo $email; ?>
                         </p>
                     </div>
                 </div>
